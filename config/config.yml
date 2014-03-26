@@ -1,0 +1,39 @@
+default:
+  server:
+    port: 3000
+  database:
+    host: 'localhost'
+    port: 3606
+    user: 'root'
+    password: 'admiral1'
+    database: 'lucknerjb_development'
+    charset: 'utf8'
+# Development
+development:
+  database:
+    host: 'localhost'
+    port: 3606
+    user: 'root'
+    password: 'admiral1'
+    database: 'lucknerjb_development'
+    charset: 'utf8'
+# Test
+test:
+  database:
+    host: 'localhost'
+    port: 3606
+    user: 'root'
+    password: 'admiral1'
+    database: 'lucknerjb_development'
+    charset: 'utf8'
+# Production
+production:
+  server:
+    port: 8000
+  database:
+    host: 'localhost'
+    port: 3606
+    user: 'root'
+    password: 'admiral1'
+    database: 'lucknerjb_development'
+    charset: 'utf8'

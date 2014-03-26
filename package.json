@@ -1,0 +1,39 @@
+{
+  "name": "lucknerjb.com",
+  "version": "0.0.0",
+  "description": "Personal Website",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lucknerjb/personal-site.git"
+  },
+  "author": "Luckner Jr. Jean-Baptiste",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/lucknerjb/personal-site/issues"
+  },
+  "homepage": "https://github.com/lucknerjb/personal-site",
+  "dependencies": {
+    "async": "~0.2.10",
+    "express": "~4.0.0",
+    "bluebird": "~1.0.7",
+    "node-yaml-config": "~0.0.2",
+    "passport": "~0.1.18",
+    "path": "~0.4.9",
+    "passport-local": "~0.1.6",
+    "underscore": "~1.6.0",
+    "swig": "~1.2.2",
+    "request": "~2.33.0",
+    "morgan": "~1.0.0",
+    "method-override": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "express-session": "~1.0.2",
+    "cookie-parser": "~1.0.1",
+    "moment": "~2.5.1",
+    "md5": "~1.0.0",
+    "connect-redis": "~1.5.0"
+  }
+}
