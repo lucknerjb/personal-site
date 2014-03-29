@@ -34,7 +34,7 @@ module.exports =
         app.use express.static(path.join(base_path, '/public'))
         app.set 'view cache', false # Use Swig's template caching for now
         # Uncomment the following to disable swig's caching
-        #swig.setDefaults { cache: false }
+        swig.setDefaults { cache: false }
         app.use morgan('dev') # log every request to the console
         app.use methodOverride()
 
@@ -47,6 +47,8 @@ module.exports =
           key: 'lucknerjb.session.sid'
         app.use(session session_object, 'secret': 'StjU2RhnUuY82ENG8vqrWn3CtyY3ySWyYyE2fLLD29xCf3Wh')
         #app.use express.session()
+      else
+        swig.setDefaults { cache: true }
 
   load: () ->
     config = yaml_config.load this.base_path() + '/config/config.yml'

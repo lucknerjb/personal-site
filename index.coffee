@@ -10,7 +10,7 @@ app     = express()
 tools   = require './libs/tools'
 config  = require './libs/config'
 
-#routes  = require 'routes'
+routes  = require './libs/routes'
 port    = process.env.PORT || 3000
 
 # Setup application configuration
@@ -30,10 +30,12 @@ app.use (req, res, next) ->
 # Local port to listen to
 app.listen port
 
-app.get(
-  '/', (req, res, next) ->
-    res.send 'Welcome!'
-)
+# app.get(
+#   '/', (req, res, next) ->
+#     res.send 'Welcome!'
+# )
+
+app.get( '/', routes.index )
 
 # Create server
 http.createServer(app).listen(

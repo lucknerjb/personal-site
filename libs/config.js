@@ -38,6 +38,9 @@ module.exports = {
         app.set('view engine', 'html');
         app.use(express["static"](path.join(base_path, '/public')));
         app.set('view cache', false);
+        swig.setDefaults({
+          cache: false
+        });
         app.use(morgan('dev'));
         app.use(methodOverride());
         app.use(cookieParser('LucknerJB.com Personal Site'));
@@ -50,6 +53,10 @@ module.exports = {
         return app.use(session(session_object, {
           'secret': 'StjU2RhnUuY82ENG8vqrWn3CtyY3ySWyYyE2fLLD29xCf3Wh'
         }));
+      } else {
+        return swig.setDefaults({
+          cache: true
+        });
       }
     };
   },
